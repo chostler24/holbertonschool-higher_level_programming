@@ -1,3 +1,3 @@
-# 0x00. Python - Hello, World
+# Higher Level Programming
 
-This project introduces Holberton students to the Python language.
+This repository is for learning higher level programming using the Python language.
