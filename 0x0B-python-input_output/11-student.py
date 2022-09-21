@@ -12,7 +12,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """to JSON attributes"""
-        if attrs != None:
+        if attrs is not None:
             x = {}
             for key, value in vars(self).items():
                 if key in attrs:
