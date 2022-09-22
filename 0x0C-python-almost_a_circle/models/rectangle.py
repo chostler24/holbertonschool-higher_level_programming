@@ -96,6 +96,12 @@ class Rectangle(Base):
         """rectangle area"""
         return self.__width * self.__height
 
+    def display(self):
+        """print"""
+        if self.__width and self.__height:
+            print("\n".join("#" * self.__width for i in range(
+                self.__height)))
+
     def __str__(self):
         """string representation"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
