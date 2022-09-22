@@ -4,7 +4,9 @@
 
 class Base:
     """class defining Base"""
+
     __nb_objects = 0
+
     def __init__(self, id=None):
         """attributes"""
         if id is None:
