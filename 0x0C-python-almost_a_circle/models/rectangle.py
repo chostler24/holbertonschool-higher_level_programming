@@ -92,10 +92,14 @@ class Rectangle(Base):
 
         self.__y = y
 
-    def __str__(self):
-        """string representation"""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
     def area(self):
         """rectangle area"""
         return self.__width * self.__height
+
+    def __str__(self):
+        """string representation"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
