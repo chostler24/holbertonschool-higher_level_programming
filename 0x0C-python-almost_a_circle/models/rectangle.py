@@ -9,11 +9,11 @@ class Rectangle(Base):
     """class defining Rectangle inherited from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializing Rectangle"""
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -70,15 +70,3 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be > 0")
         self.__y = value
-
-    def area(self):
-        """area attribute"""
-        return self.__height * self.__width
-
-    def __str__(self):
-        """representation of Rectangle in string format"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
-                                                                 self.__x,
-                                                                 self.__y,
-                                                                 self.__width,
-                                                                 self.__height)
