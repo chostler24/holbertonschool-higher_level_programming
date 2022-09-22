@@ -98,9 +98,9 @@ class Rectangle(Base):
 
     def display(self):
         """print"""
-        if self.__width and self.__height:
-            print("\n".join("#" * self.__width for i in range(
-                self.__height)))
+        print(("\n" * self.__y) +
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for i in range(self.__height)))
 
     def __str__(self):
         """string representation"""
