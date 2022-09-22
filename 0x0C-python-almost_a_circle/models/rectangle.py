@@ -74,3 +74,15 @@ class Rectangle(Base):
     def area(self):
         """area attribute"""
         return self.__height * self.__width
+
+    def display(self):
+        """display attribute"""
+        print(("#" * self.width + "\n") * self.height, end="")
+
+    def __str__(self):
+        """representation of rectangle in string format"""
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
+                                                                 self.__x,
+                                                                 self.__y,
+                                                                 self.__width,
+                                                                 self.__height)
