@@ -35,6 +35,8 @@ class Square(Rectangle):
             if i == 2:
                 self.width = arg
             if i == 3:
+                self.x = arg
+            if i == 4:
                 self.y = arg
 
         for key, value in kwargs.items():
