@@ -51,5 +51,6 @@ class Base:
             dummy_thicc = cls(1, 2, 0)
         else:
             dummy_thicc = cls(1, 0)
+
         dummy_thicc.update(**dictionary)
         return dummy_thicc
