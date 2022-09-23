@@ -43,3 +43,13 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns instance with all attributes set"""
+        if cls.__name__ == "Rectangle":
+            dummy_thicc = cls(1, 2, 0)
+        else:
+            dummy_thicc = cls(1, 0)
+        dummy_thicc.update(**dictionary)
+        return dummy_thicc
