@@ -48,9 +48,24 @@ class Base:
     def create(cls, **dictionary):
         """returns instance with all attributes set"""
         if cls.__name__ == "Rectangle":
-            dummy_thicc = cls(1, 2, 0)
+            dummy_thicc = cls(1, 2)
         else:
-            dummy_thicc = cls(1, 0)
+            dummy_thicc = cls(1)
 
         dummy_thicc.update(**dictionary)
         return dummy_thicc
+
+    @classmethod
+    def load_from_file(cls):
+        """returns list of instances"""
+        try:
+            filename = cls.__name__ + ".json"
+            with open(filename, "r", encoding="UTF-8") as f:
+                f_string = f.read()
+                dict_list = []
+                for obj in cls.from_json_string(f_string):
+                    dict_list.append(cls.create(**obj))
+        except:
+            dict_list = []
+        return dict_list
+
