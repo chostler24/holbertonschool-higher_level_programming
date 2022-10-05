@@ -1,2 +1,3 @@
 -- prints full description of table from DB
-SELECT *;
+USE
+SHOW TABLES;
