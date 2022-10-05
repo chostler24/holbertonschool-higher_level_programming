@@ -1,3 +1,5 @@
 -- computes score average of all records in second_table
-UPDATE second_table
-SET average = AVG(score)
+ALTER TABLE second_table
+ADD average FLOAT
+SELECT AVG(score)
+FROM second_table
