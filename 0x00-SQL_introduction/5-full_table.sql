@@ -1,2 +1,2 @@
 -- prints full description of table from DB
-SHOW CREATE first_table
+SHOW CREATE TABLE first_table
