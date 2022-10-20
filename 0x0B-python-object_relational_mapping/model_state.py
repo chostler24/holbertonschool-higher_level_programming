@@ -3,6 +3,7 @@
 model_state.py module
 Class State and instance Base
 """
+import sqlalchemy
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
