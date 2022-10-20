@@ -21,5 +21,6 @@ def state_lister():
     cur.close()
     db.close()
 
+
 if __name__ == "__main__":
     state_lister()
