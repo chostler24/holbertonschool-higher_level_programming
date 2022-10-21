@@ -6,6 +6,7 @@ lists all state objects from db
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import func
 from sqlalchemy import (create_engine)
 
 
@@ -18,8 +19,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session1 = session()
-    state = session.query(State).first()
-    if state is None:
-        print("Nothing")
+    state = session.query(State.id, State.name).order_by(State.id).first()
+    if state:
+        print("{}: {}".format(state.id, state.name))
     else:
-        print(f"{state.id}: {state.name}")
+        print("Nothing")
