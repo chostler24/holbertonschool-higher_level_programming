@@ -4,6 +4,7 @@
 lists all state objects from db
 """
 import sys
+from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
@@ -18,7 +19,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
     session1 = session()
-    a_state = session.query(State.id, State.name).order_by(State.id).first()
-    for state in a_state:
-        print(f"{state.id}: {state.name}")
+    obj_found = session1.query(State).filter(State.name == argv[4]).first()
+    print(obj_found.id if obj_found else "Not found")
     session1.close()
