@@ -3,7 +3,6 @@
 Script takes in URL, sends request to URL and
 displays body of response
 """
-from asyncore import read
 import urllib.request
 import urllib.error
 import sys
