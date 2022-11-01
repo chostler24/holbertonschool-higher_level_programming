@@ -11,4 +11,4 @@ import sys
 if __name__ == "__main__":
     r = urllib.request.Request(sys.argv[1])
     with urllib.request.urlopen(r) as response:
-        print(repsonse.info()['X-Request-Id'])
+        print(response.info()['X-Request-Id'])
