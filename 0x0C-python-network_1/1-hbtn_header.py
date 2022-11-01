@@ -4,7 +4,8 @@ Script that takes in a URL, sends request
 to the URL, and displays value of X-Request-Id
 variable in header of response.
 """
-import urllib.request
+import urllib
+from urllib import request
 import sys
 
 
